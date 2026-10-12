@@ -11,6 +11,7 @@ import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ScheduleModal from './components/ScheduleModal';
+import AsanaChatbot from './components/AsanaChatbot';
 
 export default function App() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -51,6 +52,9 @@ export default function App() {
         isOpen={bookingOpen}
         onClose={() => setBookingOpen(false)}
       />
+
+      {/* Interactive Asana Knowledge Assistant Chatbot */}
+      <AsanaChatbot />
 
       {/* Footer */}
       <Footer />
