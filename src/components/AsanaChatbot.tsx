@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Sparkles, Bot, User, RefreshCw, ChevronRight } from 'lucide-react';
+import { Bot, User, RefreshCw, X, Sparkles, Send } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -389,4 +389,3 @@ export default function AsanaChatbot() {
     </>
   );
 }
----
