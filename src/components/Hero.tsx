@@ -33,7 +33,7 @@ export default function Hero({ onOpenBooking, onExploreCourses }: HeroProps) {
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Ritrova il tuo ritmo.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D83153] via-[#D88431] to-[#0A6B5C]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D83153] via-[#765e47] to-[#0A6B5C]">
                 Il respiro che crea spazio.
               </span>
             </h1>
