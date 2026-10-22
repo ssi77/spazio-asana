@@ -73,21 +73,21 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="rounded-2xl bg-[#F2EBED] border border-white/60 overflow-hidden transition-all duration-300 shadow-sm"
+                className="rounded-2xl bg-[#F2EBED] border border-white/60 overflow-hidden transition-all duration-200 shadow-sm"
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-5 md:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
                   <span
-                    className="font-bold text-base md:text-lg text-[#111827]"
+                    className="font-bold text-base md:text-lg text-[#111827] min-w-0"
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                    className={`w-8 h-8 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-200 ${
                       isOpen ? 'rotate-180 bg-[#D83153] text-white' : 'text-[#111827]'
                     }`}
                   >
@@ -95,15 +95,11 @@ export default function FAQ() {
                   </div>
                 </button>
 
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
-                  <div className="p-6 pt-0 text-sm md:text-base text-[#5C4F65] leading-relaxed border-t border-[#FAF6F8]/60">
+                {isOpen && (
+                  <div className="px-5 pb-5 md:px-6 md:pb-6 text-sm md:text-base text-[#5C4F65] leading-relaxed border-t border-[#FAF6F8]/80 pt-3">
                     {faq.answer}
                   </div>
-                </div>
+                )}
               </div>
             );
           })}

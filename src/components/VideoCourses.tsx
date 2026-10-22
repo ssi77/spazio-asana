@@ -252,7 +252,7 @@ export default function VideoCourses() {
                   Istruttore: {course.instructor}
                 </p>
 
-                <p className="text-xs text-[#5C4F65] mt-3 line-clamp-2 leading-relaxed">
+                <p className="text-xs text-[#5C4F65] mt-3 leading-relaxed">
                   {course.description}
                 </p>
               </div>

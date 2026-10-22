@@ -12,18 +12,18 @@ export default function Hero({ onOpenBooking, onExploreCourses }: HeroProps) {
   return (
     <section className="relative min-h-[92vh] pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden flex items-center">
       {/* Subtle organic gradient glows */}
-      <div className="absolute top-12 left-1/4 w-80 h-80 rounded-full bg-[#D83153]/10 blur-3xl pointer-events-none -z-10" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-[#0A6B5C]/10 blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full bg-[#D88431]/10 blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-12 left-10 w-72 h-72 rounded-full bg-[#D83153]/10 blur-3xl pointer-events-none -z-10 max-w-[80vw]" />
+      <div className="absolute bottom-10 right-4 w-72 h-72 rounded-full bg-[#0A6B5C]/10 blur-3xl pointer-events-none -z-10 max-w-[80vw]" />
+      <div className="absolute top-1/2 right-1/4 w-60 h-60 rounded-full bg-[#D88431]/10 blur-3xl pointer-events-none -z-10 max-w-[80vw]" />
 
-      <div ref={ref} style={style} className="max-w-6xl mx-auto px-4 md:px-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div ref={ref} style={style} className="max-w-6xl mx-auto px-4 md:px-6 w-full overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* Left Column: Asymmetric Bold Typography */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBED] border border-[#D83153]/20 mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-[#D83153] animate-pulse" />
-              <span className="text-xs font-semibold text-[#111827] uppercase tracking-wider">
+          <div className="lg:col-span-7 flex flex-col items-start text-left min-w-0 w-full">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBED] border border-[#D83153]/20 mb-6 max-w-full">
+              <span className="flex h-2 w-2 rounded-full bg-[#D83153] animate-pulse shrink-0" />
+              <span className="text-xs font-semibold text-[#111827] uppercase tracking-wider truncate">
                 Studio in Presenza & Piattaforma On-Demand
               </span>
             </div>
@@ -78,10 +78,10 @@ export default function Hero({ onOpenBooking, onExploreCourses }: HeroProps) {
           </div>
 
           {/* Right Column: Hero Visual with Interactive Badge */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+          <div className="lg:col-span-5 relative min-w-0 w-full mt-6 lg:mt-0">
+            <div className="relative mx-auto max-w-md lg:max-w-none w-full">
               {/* Main Decorative Organic Frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-[#F2EBED]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-[#F2EBED] w-full">
                 <img
                   src="https://pub-3a823b4a94e74f1c9bf9813f768ca0e7.r2.dev/builder/229/assets/ai-33c49d47aa-236ac102a958.jpg"
                   alt="Sessione di yoga serena in studio a Spazio Asana"
@@ -89,30 +89,30 @@ export default function Hero({ onOpenBooking, onExploreCourses }: HeroProps) {
                   width={500}
                   height={625}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 via-transparent to-transparent pointer-events-none" />
                 
                 {/* Overlay quote card */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-[#FAF6F8]/90 backdrop-blur-md border border-white/60 shadow-lg text-left">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#0A6B5C] text-white flex items-center justify-center font-bold text-sm shrink-0">
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#FAF6F8]/95 backdrop-blur-md border border-white/60 shadow-lg text-left">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-9 h-9 rounded-full bg-[#0A6B5C] text-white flex items-center justify-center font-bold text-xs shrink-0">
                       SA
                     </div>
-                    <div>
-                      <p className="text-xs font-bold text-[#111827]">Pratica Guidata Oggi: 18:30</p>
-                      <p className="text-[11px] text-[#5C4F65]">Vinyasa Flow Dinamico con Elena &bull; Streaming & Live</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs font-bold text-[#111827] truncate">Pratica Guidata Oggi: 18:30</p>
+                      <p className="text-[11px] text-[#5C4F65] truncate">Vinyasa Flow Dinamico con Elena &bull; Streaming & Live</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Floating Pill Badge Top Right */}
-              <div className="absolute -top-4 -right-4 p-3.5 rounded-2xl bg-white shadow-xl border border-[#F2EBED] flex items-center gap-3 animate-bounce shadow-[#111827]/5" style={{ animationDuration: '4s' }}>
-                <div className="p-2 rounded-xl bg-[#D83153]/10 text-[#D83153]">
-                  <Sparkles className="w-5 h-5" />
+              <div className="absolute -top-3 right-2 sm:-right-2 p-3 rounded-2xl bg-white shadow-xl border border-[#F2EBED] flex items-center gap-2.5 max-w-[calc(100vw-3rem)]">
+                <div className="p-1.5 rounded-xl bg-[#D83153]/10 text-[#D83153] shrink-0">
+                  <Sparkles className="w-4 h-4" />
                 </div>
-                <div>
-                  <p className="text-xs font-bold text-[#111827]">240+ Ore On-Demand</p>
-                  <p className="text-[10px] text-[#5C4F65]">Qualità 4K & Audio Immersivo</p>
+                <div className="min-w-0">
+                  <p className="text-xs font-bold text-[#111827] truncate">240+ Ore On-Demand</p>
+                  <p className="text-[10px] text-[#5C4F65] truncate">Qualità 4K & Audio Immersivo</p>
                 </div>
               </div>
             </div>

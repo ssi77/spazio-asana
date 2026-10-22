@@ -36,38 +36,38 @@ export default function Navbar({ onOpenBooking, onExploreCourses }: NavbarProps)
             : 'bg-[#FAF6F8] md:bg-transparent'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between gap-4">
           {/* Logo & Brand Name */}
-          <a href="#" className="flex items-center gap-3.5 group focus:outline-none">
-            <div className="p-1 rounded-2xl bg-[#F2EBED] border border-[#D83153]/10 shadow-sm transition-transform group-hover:scale-105">
+          <a href="#" className="flex items-center gap-3 group focus:outline-none shrink-0 min-w-0">
+            <div className="p-1 rounded-2xl bg-[#F2EBED] border border-[#D83153]/10 shadow-sm transition-transform group-hover:scale-105 shrink-0">
               <img
                 src="https://pub-3a823b4a94e74f1c9bf9813f768ca0e7.r2.dev/media/logo/57dad132282f4f1891b8e3e1f83869c7.png"
                 alt="Spazio Asana"
-                className="h-10 w-10 rounded-xl object-contain"
+                className="h-10 w-10 rounded-xl object-contain shrink-0"
                 width={40}
                 height={40}
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col min-w-0">
               <span
-                className="text-xl md:text-2xl font-bold tracking-tight text-[#111827] leading-none"
+                className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-[#111827] leading-none truncate"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 Spazio Asana
               </span>
-              <span className="text-[11px] font-medium text-[#0A6B5C] uppercase tracking-widest mt-1">
+              <span className="text-[10px] sm:text-[11px] font-medium text-[#0A6B5C] uppercase tracking-widest mt-1 truncate">
                 Yoga & Breath Sanctuary
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-6 shrink-0">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-[#5C4F65] hover:text-[#D83153] transition-colors relative py-1 hover:after:w-full after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#D83153] after:transition-all after:duration-300"
+                className="text-sm font-medium text-[#5C4F65] hover:text-[#D83153] transition-colors relative py-1 hover:after:w-full after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#D83153] after:transition-all after:duration-300 whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -75,17 +75,17 @@ export default function Navbar({ onOpenBooking, onExploreCourses }: NavbarProps)
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5 shrink-0">
             <button
               onClick={onExploreCourses}
-              className="px-4 py-2.5 rounded-full text-xs font-semibold text-[#0A6B5C] bg-[#0A6B5C]/10 hover:bg-[#0A6B5C]/15 transition-all flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-full text-xs font-semibold text-[#0A6B5C] bg-[#0A6B5C]/10 hover:bg-[#0A6B5C]/15 transition-all flex items-center gap-1.5 shrink-0"
             >
               <Play className="w-3.5 h-3.5 fill-[#0A6B5C]" />
               Video Corsi
             </button>
             <button
               onClick={onOpenBooking}
-              className="px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#D83153] hover:bg-[#D83153]/90 shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 active:scale-95"
+              className="px-4 py-2 rounded-full text-xs font-semibold text-white bg-[#D83153] hover:bg-[#D83153]/90 shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 shrink-0 active:scale-95"
             >
               <Calendar className="w-3.5 h-3.5" />
               Prenota Lezione
@@ -95,7 +95,7 @@ export default function Navbar({ onOpenBooking, onExploreCourses }: NavbarProps)
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileOpen(true)}
-            className="lg:hidden p-2 rounded-xl text-[#111827] bg-[#F2EBED] hover:bg-[#D83153]/10 transition-colors"
+            className="xl:hidden p-2 rounded-xl text-[#111827] bg-[#F2EBED] hover:bg-[#D83153]/10 transition-colors shrink-0"
             aria-label="Apri menu di navigazione"
           >
             <Menu className="w-6 h-6" />
